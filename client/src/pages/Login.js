@@ -42,7 +42,7 @@ const Login = () => {
 			<div className='login-page '>
 				{loading && <Spinner />}
 				<div className='row container'>
-					<h1>Expense Management</h1>
+					<h1>Expense Tracker</h1>
 					<div className='col-md-6'>
 						<img src={img} alt='login-img' width={'100%'} height='100%' />
 					</div>
