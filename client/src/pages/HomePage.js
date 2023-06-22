@@ -76,7 +76,7 @@ const HomePage = () => {
 				const user = JSON.parse(localStorage.getItem('user'));
 				setLoading(true);
 				const res = await axios.post(
-					'http://localhost:8080/api/v1/transections/get-transection',
+					'https://expense-tracker-backend-a8dw.onrender.com/api/v1/transections/get-transection',
 					{
 						userid: user._id,
 						frequency,
@@ -98,7 +98,7 @@ const HomePage = () => {
 		try {
 			setLoading(true);
 			await axios.post(
-				'http://localhost:8080/api/v1/transections/delete-transection',
+				'https://expense-tracker-backend-a8dw.onrender.com/api/v1/transections/delete-transection',
 				{
 					transacationId: record._id
 				}
@@ -119,7 +119,7 @@ const HomePage = () => {
 			setLoading(true);
 			if (editable) {
 				await axios.post(
-					'http://localhost:8080/api/v1/transections/edit-transection',
+					'https://expense-tracker-backend-a8dw.onrender.com/api/v1/transections/edit-transection',
 					{
 						payload: {
 							...values,
@@ -132,7 +132,7 @@ const HomePage = () => {
 				message.success('Transaction Updated Successfully');
 			} else {
 				await axios.post(
-					'http://localhost:8080/api/v1/transections/add-transection',
+					'https://expense-tracker-backend-a8dw.onrender.com/api/v1/transections/add-transection',
 					{
 						...values,
 						userid: user._id
